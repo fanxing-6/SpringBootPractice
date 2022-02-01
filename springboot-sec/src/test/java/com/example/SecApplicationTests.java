@@ -10,6 +10,7 @@ class SecApplicationTests
     @Test
     void contextLoads()
     {
+
     }
 
 }
