@@ -38,6 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     protected void configure(HttpSecurity http) throws Exception
     {
         http
+
                 //关闭csrf
                 .csrf().disable()
                 //不通过Session获取SecurityContext
@@ -53,7 +54,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                 // 除上面外的所有请求全部不需要认证即可访问
                 .anyRequest().permitAll();
 
-//关闭默认退出功能
+        //关闭默认退出功能
         http.logout().disable();
         //把jwtAuthenticationTokenFilter添加到SpringSecurity的过滤器链中
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);

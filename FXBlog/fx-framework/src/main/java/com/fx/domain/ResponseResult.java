@@ -38,6 +38,7 @@ public class ResponseResult<T> implements Serializable
         return result.error(code, msg);
     }
     public static ResponseResult okResult() {
+
         ResponseResult result = new ResponseResult();
         return result;
     }

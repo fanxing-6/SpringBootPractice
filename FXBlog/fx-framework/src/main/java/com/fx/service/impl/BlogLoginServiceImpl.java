@@ -1,5 +1,4 @@
 package com.fx.service.impl;
-
 import com.fx.domain.ResponseResult;
 import com.fx.domain.entity.LoginUser;
 import com.fx.domain.entity.User;
