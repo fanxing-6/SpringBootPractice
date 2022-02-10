@@ -11,33 +11,37 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 /**
- * 评论表(Comment)表实体类
+ * 用户表(User)表实体类
  *
  * @author makejava
- * @since 2022-02-10 00:08:03
+ * @since 2022-02-10 18:19:39
  */
-@SuppressWarnings("serial")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("fx_comment")
-public class Comment  {
+@TableName("sys_user")
+public class User
+{
+    //主键@TableId
     @TableId
     private Long id;
 
-    //评论类型（0代表文章评论，1代表友链评论）
+    //用户名
+    private String userName;
+    //密码
+    private String password;
+    //用户类型：0代表普通用户，1代表管理员
     private String type;
-    //文章id
-    private Long articleId;
-    //根评论id
-    private Long rootId;
-    //评论内容
-    private String content;
-    //所回复的目标评论的userid
-    private Long toCommentUserId;
-    //回复目标评论id
-    private Long toCommentId;
+    //账号状态（0正常 1停用）
+    private String status;
+    //邮箱
+    private String email;
+    //手机号
+    private String phonenumber;
+    //用户性别（0男，1女，2未知）
+    private String sex;
 
     // 自动填充
     @TableField(fill = FieldFill.INSERT)
@@ -48,6 +52,7 @@ public class Comment  {
     private Long updateBy;
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
+
     //删除标志（0代表未删除，1代表已删除）
     private Integer delFlag;
 
