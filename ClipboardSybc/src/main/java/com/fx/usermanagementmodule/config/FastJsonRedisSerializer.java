@@ -58,6 +58,7 @@ public class FastJsonRedisSerializer<T> implements RedisSerializer<T>
 
     protected JavaType getJavaType(Class<?> clazz)
     {
+
         return TypeFactory.defaultInstance().constructType(clazz);
     }
 }

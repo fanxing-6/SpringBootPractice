@@ -13,7 +13,7 @@ public enum AppHttpCodeEnum
     EMAIL_EXIST(503, "邮箱已存在"),
      NULL_USERNAME_OR_PASSWORD(504,"请填写完整的用户名密码" ),
     LOGIN_ERROR(505, "用户名或密码错误"),
-    CONTEXT_NULL(506, "评论内容不能为空");
+    MESSAGE_ERROR(506,"消息类型错误");
 
     int code;
     String msg;
